@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage('checkout code'){
+        stage('Checkout Code'){
         steps{
             git 'https://github.com/adil-learning/Jenkins-learning'
         }
@@ -13,7 +13,7 @@ pipeline{
         }
         stage('Test the code'){
             steps{
-                sh 'echo "testing the code in the test environment"'
+                sh 'echo "testing the code to the test environment"'
             }
         }
         stage('Deploy'){
