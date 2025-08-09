@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    options{
+        skipdefaultcheckout(true)
+    }
     stages {
         stage('Checkout Code') {
             steps {
@@ -22,8 +25,7 @@ pipeline {
             }
         }
     }
-}
-post{
+    post{
     success{
         bat 'echo "build is successful"'
     }
@@ -31,3 +33,5 @@ post{
         bat 'echo "build failed"'
     }
 }
+}
+
