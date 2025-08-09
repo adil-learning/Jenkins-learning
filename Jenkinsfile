@@ -3,7 +3,8 @@ pipeline{
     stages{
         stage('Checkout Code'){
         steps{
-            git 'https://github.com/adil-learning/Jenkins-learning'
+            git branch: 'main'
+            url: 'https://github.com/adil-learning/Jenkins-learning'
         }
         }
         stage('Build'){
