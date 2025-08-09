@@ -3,10 +3,9 @@ pipeline{
     stages{
         stage('Checkout Code'){
         steps{
-            git branch: 'main'
-            url: 'https://github.com/adil-learning/Jenkins-learning'
+           git 'https://github.com/adil-learning/Jenkins-learning'
         }
-        }
+    }
         stage('Build'){
             steps{
                 sh 'echo "Build the code"'
