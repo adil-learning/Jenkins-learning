@@ -1,7 +1,7 @@
 pipeline {
     agent any
     options{
-        skipdefaultcheckout(true)
+        skipDefaultCheckout(true)
     }
     stages {
         stage('Checkout Code') {
